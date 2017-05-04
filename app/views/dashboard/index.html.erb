@@ -1,0 +1,17 @@
+<p>[<a title="Salir" href="/auth/logout">Logout</a>]</p>
+
+<h1>¡Hola <em><%= session[:user_name] %></em>!</h1>
+
+<h3>Tienda: <%= @shop_name %> <code> <%= @current_shop.subdomain %></code></h3>
+
+<h3>Listado de tus últimos pedidos</h3>
+
+<%= render :partial => 'table', :locals => {:orders => @orders} %>
+
+<div class="paginate">
+  <%= link_to("< Anterior", p: pagina(@orders.rels[:prev].href)) if @orders.rels[:prev] %> |
+  <%= link_to("Siguiente >", p: pagina(@orders.rels[:next].href)) if @orders.rels[:next] %> 
+</div>
+
+<p> Total de registros: <%= @orders.count %> </p>
+

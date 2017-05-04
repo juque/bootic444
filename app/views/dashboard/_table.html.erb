@@ -1,0 +1,12 @@
+<table class="orders">
+  <thead>
+    <tr>
+        <th>pedido</th>
+        <th>estado</th>
+        <th>$</th>
+    </tr> 
+  </thead>
+  <tbody>
+    <%= render :partial => 'order', :collection => orders.to_a %>
+  </tbody>
+</table>
