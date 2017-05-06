@@ -1,0 +1,12 @@
+default: &default
+  bla: ble
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
+

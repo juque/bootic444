@@ -12,3 +12,7 @@
 !/log/.keep
 /tmp
 .env
+
+config/config.yml
+config/database.yml
+config/unicorn.rb
